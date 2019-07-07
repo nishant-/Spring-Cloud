@@ -14,7 +14,6 @@ public class LimitsConfigurationController {
 
     @GetMapping(path= {"/limits"})
     public LimitConfiguration retrieveLimitFromConfiguration() {
-
        LimitConfiguration limitConfiguration = LimitConfiguration.builder().
                maximum(configuration.getMaximum()).
                minimum(configuration.getMinimum()).build();
