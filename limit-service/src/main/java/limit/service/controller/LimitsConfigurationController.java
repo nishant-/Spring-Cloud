@@ -18,7 +18,5 @@ public class LimitsConfigurationController {
                maximum(configuration.getMaximum()).
                minimum(configuration.getMinimum()).build();
        return limitConfiguration;
-
-
     }
 }
