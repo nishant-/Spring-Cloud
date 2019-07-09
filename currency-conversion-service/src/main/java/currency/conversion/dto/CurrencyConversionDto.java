@@ -18,5 +18,5 @@ public class CurrencyConversionDto {
     private BigDecimal conversionMultiple;
     private BigDecimal quantity;
     private BigDecimal totalCalculatedAmount;
-   // private int port;
+    private int port;
 }

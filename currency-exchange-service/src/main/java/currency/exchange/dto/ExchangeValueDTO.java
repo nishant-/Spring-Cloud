@@ -16,4 +16,5 @@ public class ExchangeValueDTO {
     private String from;
     private String to;
     private BigDecimal conversionMultiple;
+    int port;
 }

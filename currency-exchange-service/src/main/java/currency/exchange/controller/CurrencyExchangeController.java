@@ -34,7 +34,7 @@ public class CurrencyExchangeController {
                 from(from).
                 to(to).
                 conversionMultiple(BigDecimal.valueOf(55)).port(port).build();*/
-
+        exchangeValue.setPort(port);
         ModelMapper modelMapper = new ModelMapper();
         return modelMapper.map(exchangeValue,ExchangeValueDTO.class);
 

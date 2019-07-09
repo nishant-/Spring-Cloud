@@ -29,7 +29,7 @@ public class CurrencyConversionController {
                 getForEntity("http://localhost:8000/currency-exchange/from/{from}/to/{to}",
                         CurrencyConversionDto.class,uriVariables);
         CurrencyConversionDto response = responseEntity.getBody();
-        return new CurrencyConversionDto(from, to, response.getConversionMultiple(), quantity, quantity.multiply(response.getConversionMultiple()));
+        return new CurrencyConversionDto(from, to, response.getConversionMultiple(), quantity, quantity.multiply(response.getConversionMultiple()),response.getPort());
     }
 
 
@@ -37,7 +37,7 @@ public class CurrencyConversionController {
     public CurrencyConversionDto convertCurrencyFeign(@PathVariable String from, @PathVariable String to, @PathVariable BigDecimal quantity){
 
         CurrencyConversionDto response = proxy.convertCurrency(from,to);
-        return new CurrencyConversionDto(from, to, response.getConversionMultiple(), quantity, quantity.multiply(response.getConversionMultiple()));
+        return new CurrencyConversionDto(from, to, response.getConversionMultiple(), quantity, quantity.multiply(response.getConversionMultiple()),response.getPort());
     }
 
 }
