@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="currency-conversion-service" />
         <module name="eureka-naming-server" />
         <module name="config-server" />
-        <module name="currency-conversion-service" />
+        <module name="zuul-api-gateway" />
         <module name="currency-exchange-service" />
         <module name="limit-service" />
       </profile>
@@ -19,6 +20,7 @@
       <module name="currency-exchange-service" target="1.8" />
       <module name="eureka-naming-server" target="1.8" />
       <module name="limit-service" target="1.8" />
+      <module name="zuul-api-gateway" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -28,6 +30,7 @@
       <module name="currency-exchange-service" options="-parameters" />
       <module name="eureka-naming-server" options="-parameters" />
       <module name="limit-service" options="-parameters" />
+      <module name="zuul-api-gateway" options="-parameters" />
     </option>
   </component>
 </project>
